@@ -1,0 +1,13 @@
+apiVersion: extensions.sk8s.io/v1
+kind: Function
+metadata:
+  name: greeter
+spec:
+  input: names
+  output: greetings
+  handler: spring
+  params:
+  - name: uri
+    value: file:///functions/greeter-0.0.1-SNAPSHOT.jar
+  - name: classname
+    value: functions.Greeter
