@@ -339,6 +339,7 @@ public class HandlerPool implements Dispatcher, SmartLifecycle {
 							if (initResponse.getStatusCodeValue() == 404) {
 								throw new RuntimeException("retry if not timed out");
 							}
+							break;
 						}
 						catch (Exception retry) {
 							try {
